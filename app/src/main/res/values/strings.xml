@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Rezepte</string>
+
+    <!-- Toast message in editor when new pet has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_pet_successful">recipe saved</string>
+
+    <!-- Toast message in editor when new pet has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_pet_failed">Error with saving recipe</string>
+    <string name="editor_update_pet_failed"> Error with updating recipe</string>
+    <string name="editor_update_pet_successful"> Yippieh !! erfolgreich geupdated</string>
+
+    <!-- Toast message in editor when current pet was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_pet_successful">Rezept deleted</string>
+
+    <!-- Toast message in editor when current pet has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_pet_failed">Error with deleting recipe</string>
+
+
+
+    <!-- Dialog button text for the option to confirm deleting the current pet [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+
+    <!-- Dialog button text for the option to cancel deletion of the current pet [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
+</resources>

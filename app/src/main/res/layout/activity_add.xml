@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rezept hinzufügen"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/colorAccent"></TextView>
+ -->
+    <!-- Overview category -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+
+        <!-- Input fields -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="4dp"
+            android:orientation="vertical">
+
+            <!-- Name field -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_name"
+                android:hint="Name"
+                android:inputType="textCapWords"
+                ></EditText>
+
+            <!-- Breed field -->
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/edit_zutaten"
+                android:hint="Zutaten"
+                android:inputType="text"
+                 />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/edit_kommentar"
+                android:hint="Kommentar"
+                android:inputType="text"
+                />
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="ADD"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_marginRight = "7dp"
+                />
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="DELETE"
+                android:visibility="invisible"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_marginRight = "7dp"
+                />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+
+

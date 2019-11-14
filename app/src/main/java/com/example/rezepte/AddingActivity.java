@@ -1,10 +1,10 @@
 package com.example.rezepte;
 
 import android.content.ContentValues;
-import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AddingActivity extends AppCompatActivity {
@@ -49,10 +49,7 @@ public class AddingActivity extends AppCompatActivity {
         };
 
 
-   /* if(currentRezeptUri != null) {
-        Cursor cursor = getContentResolver().query(
-                currentRezeptUri, projection, null, null, null);
-    }*/
+
         if(currentRezeptUri == null){
             setTitle("Rezept hinzufügen");
         } else {
@@ -69,7 +66,7 @@ public class AddingActivity extends AppCompatActivity {
             deleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    deletePet();
+                    deleteRezept();
                 }
             });
 
@@ -105,10 +102,8 @@ public class AddingActivity extends AppCompatActivity {
     /**
      * Perform the deletion of the pet in the database.
      */
+
     private void deleteRezept() {
-        getContentResolver().delete(getIntent().getData(),null,null);
-    }
-    private void deletePet() {
         // Only perform the delete if this is an existing pet.
         if (currentRezeptUri != null) {
             // Call the ContentResolver to delete the pet at the given content URI.
@@ -142,11 +137,9 @@ public class AddingActivity extends AppCompatActivity {
         editKommentar = (EditText) findViewById(R.id.edit_kommentar);
         editZutat = (EditText) findViewById(R.id.edit_zutaten);
 
-       // DbHelper helper = new DbHelper(this);
-       // SQLiteDatabase db = helper.getWritableDatabase();
+
 
         String nameString = editName.getText().toString().trim();
-        // erst mal nur eine zutat, dann später liste
         String zutatenString = editZutat.getText().toString();
         String kommentarString = editKommentar.getText().toString().trim();
 
@@ -194,12 +187,6 @@ public class AddingActivity extends AppCompatActivity {
 
 
 
-       /* if (newRowId == -1) {
-            // If the row ID is -1, then there was an error with insertion.
-            Toast.makeText(this, "Error with saving pet", Toast.LENGTH_SHORT).show();
-        } else {
-            // Otherwise, the insertion was successful and we can display a toast with the row ID.
-            Toast.makeText(this, "Pet saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
-        }*/
+
     }
 }
